@@ -16,3 +16,15 @@ document.querySelectorAll('.dev-title').forEach((item, index)=>{
         container[index].classList.add('active');
     });
 });
+
+const skills = ['html', 'css', 'javascript', 'react', 'react native', 'node js', 'express js', 
+'electron js', 'symfony', 'vanilla php', 'django', 'django restframework', 'python',
+'flutter', 'mysql', 'adobe photoshop', 'adobe after effect', 'adobe illustrator'];
+
+document.querySelectorAll('div').forEach(item=>{
+    if(item.hasAttribute('data-skills')){
+        let string = '';
+        skills.forEach(item=>string+=`<div class="dev-list">${item}</div>`);
+        item.innerHTML = string;
+    }
+});
