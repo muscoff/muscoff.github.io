@@ -65,6 +65,10 @@ a.github{
     background-color: black;
 }
 
+a.youtube{
+    background-color: rgb(221, 63, 63);
+}
+
 .margin-left-10, a.margin-left-10{
     margin-left: 10px;
 }
