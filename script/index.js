@@ -25,7 +25,7 @@ const projects = [
     {
         title: 'Muchat - A web version of WhatsApp using Socket.io and NodeJS',
         tools: 'HTML, CSS, JAVASCRIPT, Socket.io, NodeJS',
-        description: "Muchat is a web version of WhatsApp except you only need a username and password to register and use the application. The application has the same features as WhatsApp and supports private chat conversations. Users are able to send video, audio, images and documents do their Muchat contacts. This application developed using socket.io, nodejs and express js.<br /><br />To register on the app, click on the muchat button and create an account with a username and password. Click on the watch button to watch the youtube presentation of this application<br /><br />Muchat is not backed by any database but your informations are safely stored and protected<br />The application is currently hosted on amazon elasticbeanstalk service.<br />",
+        description: "Muchat is a web version of WhatsApp except you only need a username and password to register and use the application. The application has the same features as WhatsApp and supports private chat conversations. Users are able to send video, audio, images and documents do their Muchat contacts. This application was developed using socket.io, nodejs and express js.<br /><br />To register on the app, click on the muchat button and create an account with a username and password. Click on the watch button to watch the youtube presentation of this application<br /><br />Muchat is not backed by any database but your informations are safely stored and protected<br />The application is currently hosted on amazon elasticbeanstalk service.<br />",
         image: './images/muchat.png',
         buttons: [
             {name: 'Muchat', btnClass:'visit', link:'http://muchat-env.eba-gzktp4f7.us-east-2.elasticbeanstalk.com/'},
@@ -103,6 +103,23 @@ const projects = [
     },
 ]
 
+const summary = {
+    intro: 'Motivated Software Engineer eager to apply my technical and organisational skills in various environments to bring about productive solutions. I am experienced in developing websites, web applications and desktop applications. I also have experience in graphic designing using abode suite products. Currently seeking opportunities to apply and expand my skills and portfolio while facilitating company growth',
+    location: 'Remote, WorldWide - Open to relocation',
+    linkedin: 'https://www.linkedin.com/in/mustapha-botchway-45aa7834',
+    dob: 'March 7, 1991',
+    github: 'https://www.github.com/muscoff',
+    youtube: 'https://www.youtube.com/channel/UCVCFIE0D5b_34816vYi5G4g'
+}
+
+const personal = {
+    name: 'Mustapha Muhammed Botchway',
+    bg: './images/bg1.png',
+    image: './images/mussy.png',
+    twitter: '@muscoff',
+    email: 'muscoff2008@gmail.com'
+}
+
 document.querySelectorAll('div').forEach(item=>{
     if(item.hasAttribute('data-skills')){
         let string = '';
@@ -131,6 +148,58 @@ document.querySelectorAll('div').forEach(item=>{
                 </div><br /><br />
             `
         })
+        item.innerHTML = string
+    }else if(item.hasAttribute('data-summary')){
+        let string = ''
+        let {intro, location, linkedin, dob, github, youtube} = summary
+        string += `
+            <div class="font-helvetica">${intro}</div><br>
+            <div class="font-roboto"><i class="fi fi-rr-marker font-12"></i> ${location}</div>
+            <div class="font-roboto row">
+                <div><i class="fi fi-rr-link font-12"></i><a target="blank" href="${linkedin}" class="link"> LinkedIn</a></div>
+                <div class="margin-left-10"><i class="fi fi-rr-infinity font-12"></i> Born ${dob}</div>
+            </div>
+            <div class="font-roboto row">
+                <div><i class="fi fi-rr-link font-12"></i><a target="blank" href="${github}" class="link"> Github</a></div>
+                <div class="margin-left-10">
+                    <i class="fi fi-rr-link font-12"></i>
+                    <a target="blank" href="${youtube}" class="link"> YouTube</a>
+                </div>
+            </div><br>
+        `
+        item.innerHTML = string
+    }else if(item.hasAttribute('data-personal')){
+        let string = ''
+        let {name, bg, image, twitter, email} = personal
+
+        string += `
+            <div class="padding-all-20 padding-s-all-10">
+                <div class="font-circular truncate">${name}</div>
+                <div class="font-jsans"></div>
+            </div>
+            <div>
+                <div><img src="${bg}" alt="" class="img"></div>
+            </div>
+            <div class="padding-all-2"></div>
+            <div class="padding-all-20 padding-s-all-10">
+                <div class="row justify-content-space-between relative">
+                    <div class="relative">
+                        <div class="absolute translate-y-50-up col-m-8 col-s-8 z-index-1">
+                            <div class="profile-img blue-bg"><img src="${image}" alt="" class="img"></div>
+                            <div class="truncate font-helvetica bold-text font-20 black-text">${name}</div>
+                            <div class="truncate font-roboto at-text">${twitter}</div>
+                        </div>
+                    </div>
+                    <div>
+                        <a target="blank" href="mailto:${email}" class="mail">Contact</a>
+                    </div>
+                    <div class="col-12">
+                        <div class="padding-all-20"></div>
+                    </div>
+                </div>
+            </div><br>
+        `
+
         item.innerHTML = string
     }
 });
