@@ -157,7 +157,7 @@ document.querySelectorAll('div').forEach(item=>{
             <div class="font-roboto"><i class="fi fi-rr-marker font-12"></i> ${location}</div>
             <div class="font-roboto row">
                 <div><i class="fi fi-rr-link font-12"></i><a target="blank" href="${linkedin}" class="link"> LinkedIn</a></div>
-                <div class="margin-left-10"><i class="fi fi-rr-infinity font-12"></i> Born ${dob}</div>
+                ${dob ? <div class="margin-left-10"><i class="fi fi-rr-infinity font-12"></i> Born {dob}</div> : <div></div>}
             </div>
             <div class="font-roboto row">
                 <div><i class="fi fi-rr-link font-12"></i><a target="blank" href="${github}" class="link"> Github</a></div>
