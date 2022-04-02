@@ -107,7 +107,7 @@ const summary = {
     intro: 'Motivated Software Engineer eager to apply my technical and organisational skills in various environments to bring about productive solutions. I am experienced in developing websites, web applications and desktop applications. I also have experience in graphic designing using abode suite products. Currently seeking opportunities to apply and expand my skills and portfolio while facilitating company growth',
     location: 'Remote, WorldWide - Open to relocation',
     linkedin: 'https://www.linkedin.com/in/mustapha-botchway-45aa7834',
-    dob: 'March 7, 1991',
+    dob: '',
     github: 'https://www.github.com/muscoff',
     youtube: 'https://www.youtube.com/channel/UCVCFIE0D5b_34816vYi5G4g'
 }
